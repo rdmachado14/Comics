@@ -15,6 +15,8 @@
 		79258C271B9F32A000AEBC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79258C251B9F32A000AEBC7C /* LaunchScreen.storyboard */; };
 		79258C321B9F32A100AEBC7C /* ComicsSolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C311B9F32A100AEBC7C /* ComicsSolutionTests.swift */; };
 		79258C3D1B9F32A100AEBC7C /* ComicsSolutionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C3C1B9F32A100AEBC7C /* ComicsSolutionUITests.swift */; };
+		A70D937E1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A70D937D1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 */; settings = {ASSET_TAGS = (); }; };
+		A70D93821B9F6365008B19D0 /* Pagina 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		79258C381B9F32A100AEBC7C /* ComicsSolutionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComicsSolutionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79258C3C1B9F32A100AEBC7C /* ComicsSolutionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsSolutionUITests.swift; sourceTree = "<group>"; };
 		79258C3E1B9F32A100AEBC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A70D937D1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "AUD-20140513-WA0012.mp3"; sourceTree = "<group>"; };
+		A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pagina 1.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				79258C1D1B9F32A000AEBC7C /* Main.storyboard */,
 				79258C231B9F32A000AEBC7C /* Assets.xcassets */,
 				79258C251B9F32A000AEBC7C /* LaunchScreen.storyboard */,
+				A70D937D1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 */,
+				A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */,
 				79258C281B9F32A000AEBC7C /* Info.plist */,
 				79258C201B9F32A000AEBC7C /* ComicsSolution.xcdatamodeld */,
 			);
@@ -231,6 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70D93821B9F6365008B19D0 /* Pagina 1.mp3 in Resources */,
+				A70D937E1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 in Resources */,
 				79258C271B9F32A000AEBC7C /* LaunchScreen.storyboard in Resources */,
 				79258C241B9F32A000AEBC7C /* Assets.xcassets in Resources */,
 				79258C1F1B9F32A000AEBC7C /* Main.storyboard in Resources */,
@@ -489,6 +497,7 @@
 				79258C431B9F32A100AEBC7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79258C441B9F32A100AEBC7C /* Build configuration list for PBXNativeTarget "ComicsSolutionTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +506,7 @@
 				79258C461B9F32A100AEBC7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79258C471B9F32A100AEBC7C /* Build configuration list for PBXNativeTarget "ComicsSolutionUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +515,7 @@
 				79258C491B9F32A100AEBC7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
