@@ -19,7 +19,23 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         loadImage()
+        loadSwipe()
         
+        
+        
+    }
+
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func loadImage()
+    {
+        comicImage.image = UIImage(named: "s005") // carregar imagem na tela
+    }
+    
+    func loadSwipe() {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view!.addGestureRecognizer(swipeRight)
@@ -38,18 +54,6 @@ class ViewController: UIViewController
         
         let swipeHorario=UIRotationGestureRecognizer(target: self, action: "respondToSwipeGesture:")
         self.view!.addGestureRecognizer(swipeHorario)
-        
-        
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func loadImage()
-    {
-        comicImage.image = UIImage(named: "s005") // carregar imagem na tela
     }
     
     
