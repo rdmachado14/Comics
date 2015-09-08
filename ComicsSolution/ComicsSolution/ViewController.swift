@@ -17,14 +17,19 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         
-        comicImage.image = UIImage(named: "s005") // carregar imagem na tela
+        
         
     }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        }
+    }
+    
+    func loadImage()
+    {
+        comicImage.image = UIImage(named: "s005") // carregar imagem na tela
+    }
 
 
 }
