@@ -8,17 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var comicImage: UIImageView!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        comicImage.image = UIImage(named: "s005") // carregar imagem na tela
+        
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+        }
 
 
 }
