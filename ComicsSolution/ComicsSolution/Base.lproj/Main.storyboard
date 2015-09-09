@@ -17,19 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7T-ow-jYI">
-                                <rect key="frame" x="30" y="129" width="315" height="410"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7T-ow-jYI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-rK-yLG">
-                                        <rect key="frame" x="42" y="48" width="249" height="326"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-rK-yLG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="639"/>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gip-rK-yLG" firstAttribute="centerX" secondItem="i7T-ow-jYI" secondAttribute="centerX" id="DyG-Hx-e2J"/>
+                                    <constraint firstItem="Gip-rK-yLG" firstAttribute="top" secondItem="i7T-ow-jYI" secondAttribute="top" id="JWj-Ox-7tT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gip-rK-yLG" secondAttribute="bottom" id="cen-ez-46J"/>
+                                    <constraint firstItem="Gip-rK-yLG" firstAttribute="centerY" secondItem="i7T-ow-jYI" secondAttribute="centerY" id="fjz-Ej-4kF"/>
+                                    <constraint firstItem="Gip-rK-yLG" firstAttribute="leading" secondItem="i7T-ow-jYI" secondAttribute="leading" id="kjb-OX-Wog"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gip-rK-yLG" secondAttribute="trailing" id="zVw-dH-C0D"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="pV8-tr-O7w"/>
                                 </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i7T-ow-jYI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="L5z-KQ-E1e"/>
+                            <constraint firstAttribute="trailing" secondItem="i7T-ow-jYI" secondAttribute="trailing" id="VQE-Rh-VRx"/>
+                            <constraint firstItem="i7T-ow-jYI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="YdA-j2-Uun"/>
+                            <constraint firstItem="i7T-ow-jYI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vYL-WQ-IeB"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
