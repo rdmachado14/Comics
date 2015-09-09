@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController
 {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var comicImage: UIImageView!
     var audioPlayer = AVAudioPlayer()
     
@@ -22,16 +23,17 @@ class ViewController: UIViewController
         loadSwipe()
         
         
+        self.scrollView.minimumZoomScale = 1.0;
+        self.scrollView.maximumZoomScale = 6.0;
         
+        loadImage()
     }
 
-    override func didReceiveMemoryWarning()
-    {
+    override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
     }
     
-    func loadImage()
-    {
+   func loadImage() {
         comicImage.image = UIImage(named: "s005") // carregar imagem na tela
     }
     
@@ -114,6 +116,9 @@ class ViewController: UIViewController
         return audioPlayer!
     }
 
-
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView?
+    {
+        return self.comicImage
+    }
 }
 
