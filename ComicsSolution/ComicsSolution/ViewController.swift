@@ -16,11 +16,15 @@ class ViewController: UIViewController
     @IBOutlet weak var comicImage: UIImageView!
     var audioPlayer = AVAudioPlayer()
     
+    var doubleTap = true
+    var location = CGPoint()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         loadImage()
         loadSwipe()
+        loadTapGesture()
         
         
         self.scrollView.minimumZoomScale = 1.0;
@@ -58,7 +62,28 @@ class ViewController: UIViewController
         self.view!.addGestureRecognizer(swipeHorario)
     }
     
+    func loadTapGesture(){
+        let bSelector : Selector = "respondToTapGesture:"
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: bSelector)
+        doubleTapGesture.numberOfTapsRequired = 2
+        self.view!.addGestureRecognizer(doubleTapGesture)
+        
+        //tapGesture.requireGestureRecognizerToFail(doubleTapGesture)
+    }
     
+    func respondToTapGesture(gesture: UITapGestureRecognizer){
+        
+        if(scrollView.zooming || doubleTap || scrollView.zoomScale == 6){
+            scrollView.zoomToRect(CGRect(x: 0, y: 0, width: 1000, height: 1000), animated: true)
+            doubleTap = false;
+        }else{
+            self.scrollView.zoomToRect(CGRect(x: location.x, y: location.y, width: 2, height: 2), animated: true)
+            print(scrollView.zoomScale)
+            doubleTap = true;
+            print(location);
+        }
+        
+    }
     
     func respondToSwipeGesture(gesture: UIGestureRecognizer){
         if let swipeGesture = gesture as? UISwipeGestureRecognizer{
