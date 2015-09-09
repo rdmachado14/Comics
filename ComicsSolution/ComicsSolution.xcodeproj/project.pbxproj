@@ -15,6 +15,7 @@
 		79258C271B9F32A000AEBC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79258C251B9F32A000AEBC7C /* LaunchScreen.storyboard */; };
 		79258C321B9F32A100AEBC7C /* ComicsSolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C311B9F32A100AEBC7C /* ComicsSolutionTests.swift */; };
 		79258C3D1B9F32A100AEBC7C /* ComicsSolutionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C3C1B9F32A100AEBC7C /* ComicsSolutionUITests.swift */; };
+		79258C4B1BA08A9900AEBC7C /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C4A1BA08A9900AEBC7C /* Sounds.swift */; settings = {ASSET_TAGS = (); }; };
 		A70D937E1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A70D937D1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 */; settings = {ASSET_TAGS = (); }; };
 		A70D93821B9F6365008B19D0 /* Pagina 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		79258C381B9F32A100AEBC7C /* ComicsSolutionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComicsSolutionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79258C3C1B9F32A100AEBC7C /* ComicsSolutionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsSolutionUITests.swift; sourceTree = "<group>"; };
 		79258C3E1B9F32A100AEBC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79258C4A1BA08A9900AEBC7C /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		A70D937D1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "AUD-20140513-WA0012.mp3"; sourceTree = "<group>"; };
 		A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pagina 1.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,15 +105,11 @@
 		79258C181B9F32A000AEBC7C /* ComicsSolution */ = {
 			isa = PBXGroup;
 			children = (
-				79258C191B9F32A000AEBC7C /* AppDelegate.swift */,
-				79258C1B1B9F32A000AEBC7C /* ViewController.swift */,
-				79258C1D1B9F32A000AEBC7C /* Main.storyboard */,
-				79258C231B9F32A000AEBC7C /* Assets.xcassets */,
-				79258C251B9F32A000AEBC7C /* LaunchScreen.storyboard */,
-				A70D937D1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 */,
-				A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */,
-				79258C281B9F32A000AEBC7C /* Info.plist */,
-				79258C201B9F32A000AEBC7C /* ComicsSolution.xcdatamodeld */,
+				79258C501BA08B2600AEBC7C /* Model */,
+				79258C4F1BA08B0F00AEBC7C /* View */,
+				79258C4E1BA08B0100AEBC7C /* Other */,
+				79258C4D1BA08AB800AEBC7C /* Controller */,
+				79258C4C1BA08AA200AEBC7C /* Sounds */,
 			);
 			path = ComicsSolution;
 			sourceTree = "<group>";
@@ -132,6 +130,51 @@
 				79258C3E1B9F32A100AEBC7C /* Info.plist */,
 			);
 			path = ComicsSolutionUITests;
+			sourceTree = "<group>";
+		};
+		79258C4C1BA08AA200AEBC7C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A70D937D1B9F60B7008B19D0 /* AUD-20140513-WA0012.mp3 */,
+				A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		79258C4D1BA08AB800AEBC7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				79258C1B1B9F32A000AEBC7C /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		79258C4E1BA08B0100AEBC7C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				79258C4A1BA08A9900AEBC7C /* Sounds.swift */,
+				79258C191B9F32A000AEBC7C /* AppDelegate.swift */,
+				79258C231B9F32A000AEBC7C /* Assets.xcassets */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		79258C4F1BA08B0F00AEBC7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79258C1D1B9F32A000AEBC7C /* Main.storyboard */,
+				79258C251B9F32A000AEBC7C /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		79258C501BA08B2600AEBC7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79258C281B9F32A000AEBC7C /* Info.plist */,
+				79258C201B9F32A000AEBC7C /* ComicsSolution.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +312,7 @@
 				79258C1C1B9F32A000AEBC7C /* ViewController.swift in Sources */,
 				79258C1A1B9F32A000AEBC7C /* AppDelegate.swift in Sources */,
 				79258C221B9F32A000AEBC7C /* ComicsSolution.xcdatamodeld in Sources */,
+				79258C4B1BA08A9900AEBC7C /* Sounds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
