@@ -119,7 +119,6 @@ class ViewController: UIViewController
             }
         }
         
-        print("rodou")
     }
     
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
@@ -141,5 +140,19 @@ class ViewController: UIViewController
         return self.comicImage
     }
     
+    @IBAction func previous(gesture: AnyObject)
+    {
+        audioPlayer = setupAudioPlayerWithFile("Pagina 1", type: "mp3")
+        audioPlayer.play()
+        comicImage.image = UIImage(named: "s005")
+    }
+    
+    @IBAction func next(sender: AnyObject)
+    {
+        audioPlayer = setupAudioPlayerWithFile("Pagina 1", type: "mp3")
+        audioPlayer.play()
+        comicImage.image = UIImage(named: "s006")
+
+    }
 }
 
