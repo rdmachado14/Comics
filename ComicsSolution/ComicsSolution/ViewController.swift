@@ -115,11 +115,6 @@ class ViewController: UIViewController
                 
             case UISwipeGestureRecognizerDirection.Down:
                 print("down")
-                
-                //                    audioPlayer.prepareToPlay()
-                //                    audioPlayer.volume = 5.0
-                //                    audioPlayer.numberOfLoops = 20
-                
                 return
                 
             default:
@@ -127,7 +122,6 @@ class ViewController: UIViewController
             }
         }
         
-        print("rodou")
     }
     
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
@@ -147,6 +141,21 @@ class ViewController: UIViewController
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView?
     {
         return self.comicImage
+    }
+    
+    @IBAction func previous(gesture: AnyObject)
+    {
+        audioPlayer = setupAudioPlayerWithFile("Pagina 1", type: "mp3")
+        audioPlayer.play()
+        comicImage.image = UIImage(named: "s005")
+    }
+    
+    @IBAction func next(sender: AnyObject)
+    {
+        audioPlayer = setupAudioPlayerWithFile("Pagina 1", type: "mp3")
+        audioPlayer.play()
+        comicImage.image = UIImage(named: "s006")
+
     }
 }
 
