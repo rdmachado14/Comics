@@ -15,6 +15,7 @@ class ViewController: UIViewController
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var comicImage: UIImageView!
     var audioPlayer = AVAudioPlayer()
+    var sound = Sound()
     
     var doubleTap = true
     var location = CGPoint()
@@ -90,7 +91,7 @@ class ViewController: UIViewController
             switch swipeGesture.direction{
             case UISwipeGestureRecognizerDirection.Right:
                 print("right")
-                audioPlayer = setupAudioPlayerWithFile("Pagina 1", type: "mp3")
+                audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
                 audioPlayer.play()
                 comicImage.image = UIImage(named: "s006")
                 return
@@ -98,7 +99,7 @@ class ViewController: UIViewController
             case UISwipeGestureRecognizerDirection.Left:
                 
                 print("left")
-                audioPlayer = setupAudioPlayerWithFile("Pagina 1", type: "mp3")
+                audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
                 audioPlayer.play()
                 comicImage.image = UIImage(named: "s005")
 
@@ -127,19 +128,7 @@ class ViewController: UIViewController
         print("rodou")
     }
     
-    func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
-        let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
-        let url = NSURL.fileURLWithPath(path!)
-        var audioPlayer:AVAudioPlayer?
-        
-        do {
-            try audioPlayer = AVAudioPlayer(contentsOfURL: url)
-        } catch {
-            print("NO AUDIO PLAYER")
-        }
-        
-        return audioPlayer!
-    }
+    
 
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView?
     {

@@ -239,12 +239,12 @@
 		79258C0E1B9F32A000AEBC7C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Rodrigo DAngelo Silva Machado";
 				TargetAttributes = {
 					79258C151B9F32A000AEBC7C = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = H37Z7SS237;
 					};
 					79258C2C1B9F32A100AEBC7C = {
 						CreatedOnToolsVersion = 7.0;
