@@ -140,16 +140,26 @@ class ViewController: UIViewController
     
     @IBAction func previous(gesture: AnyObject)
     {
-        audioPlayer = setupAudioPlayerWithFile("Pagina 1", type: "mp3")
-        audioPlayer.play()
-        comicImage.image = UIImage(named: "s005")
+        if cont < vetorStrings.count - 1 {
+            cont++
+            audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
+            audioPlayer.play()
+            comicImage.image = UIImage(named: vetorStrings[cont])
+        }
+        
+        
+        
     }
     
     @IBAction func next(sender: AnyObject)
     {
-        audioPlayer = setupAudioPlayerWithFile("Pagina 1", type: "mp3")
-        audioPlayer.play()
-        comicImage.image = UIImage(named: "s006")
+        if cont > 0 {
+            cont--
+            audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
+            audioPlayer.play()
+            comicImage.image = UIImage(named: vetorStrings[cont])
+        }
+        
 
     }
 }
