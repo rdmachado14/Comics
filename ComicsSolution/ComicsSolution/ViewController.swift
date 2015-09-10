@@ -16,6 +16,7 @@ class ViewController: UIViewController
     @IBOutlet weak var comicImage: UIImageView!
     var audioPlayer = AVAudioPlayer()
     var sound = Sound()
+    var swipe = loadSwipe()
     var cont = Int()
     var vetorStrings = ["p1","p2","p3","p4"]
     var doubleTap = true
@@ -25,7 +26,7 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         loadImage(vetorStrings)
-        loadSwipe()
+        swipe.loadSwipe(self.view!,ob: self)
         loadTapGesture()
         
         
@@ -42,26 +43,7 @@ class ViewController: UIViewController
         comicImage.image = UIImage(named: vetor[cont]) // carregar imagem na tela
     }
     
-    func loadSwipe() {
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
-        self.view!.addGestureRecognizer(swipeRight)
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
-        self.view!.addGestureRecognizer(swipeLeft)
-        
-        let swipeUp = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-        swipeUp.direction = UISwipeGestureRecognizerDirection.Up
-        self.view!.addGestureRecognizer(swipeUp)
-        
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
-        self.view!.addGestureRecognizer(swipeDown)
-        
-        let swipeHorario=UIRotationGestureRecognizer(target: self, action: "respondToSwipeGesture:")
-        self.view!.addGestureRecognizer(swipeHorario)
-    }
+
     
     func loadTapGesture(){
         let bSelector : Selector = "respondToTapGesture:"
