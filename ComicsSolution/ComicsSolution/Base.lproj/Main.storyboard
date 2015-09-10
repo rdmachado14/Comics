@@ -24,12 +24,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="639"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DA-67-S51">
-                                        <rect key="frame" x="24" y="35" width="41" height="30"/>
-                                        <state key="normal" title="Voltar"/>
+                                        <rect key="frame" x="17" y="35" width="56" height="30"/>
+                                        <state key="normal" title="Anterior"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBa-Gu-2qQ">
-                                        <rect key="frame" x="286" y="35" width="76" height="30"/>
-                                        <state key="normal" title="Recarregar"/>
+                                        <rect key="frame" x="296" y="35" width="56" height="30"/>
+                                        <state key="normal" title="Próximo"/>
                                     </button>
                                 </subviews>
                                 <constraints>
