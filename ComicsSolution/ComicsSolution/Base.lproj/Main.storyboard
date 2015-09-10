@@ -23,6 +23,14 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-rK-yLG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="639"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DA-67-S51">
+                                        <rect key="frame" x="24" y="35" width="41" height="30"/>
+                                        <state key="normal" title="Voltar"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBa-Gu-2qQ">
+                                        <rect key="frame" x="286" y="35" width="76" height="30"/>
+                                        <state key="normal" title="Recarregar"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Gip-rK-yLG" firstAttribute="centerX" secondItem="i7T-ow-jYI" secondAttribute="centerX" id="DyG-Hx-e2J"/>
@@ -53,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802.5" y="582.5"/>
+            <point key="canvasLocation" x="622.5" y="520.5"/>
         </scene>
     </scenes>
 </document>

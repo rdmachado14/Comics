@@ -112,11 +112,6 @@ class ViewController: UIViewController
                 
             case UISwipeGestureRecognizerDirection.Down:
                 print("down")
-                
-                //                    audioPlayer.prepareToPlay()
-                //                    audioPlayer.volume = 5.0
-                //                    audioPlayer.numberOfLoops = 20
-                
                 return
                 
             default:
@@ -145,5 +140,6 @@ class ViewController: UIViewController
     {
         return self.comicImage
     }
+    
 }
 
