@@ -138,7 +138,7 @@ class ViewController: UIViewController
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
             audioPlayer.play()
             audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
-            audioPlayer.play()
+            audioPlayer2.play()
             comicImage.image = UIImage(named: vetorStrings[cont])
         }
         
@@ -153,7 +153,7 @@ class ViewController: UIViewController
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
             audioPlayer.play()
             audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
-            audioPlayer.play()
+            audioPlayer2.play()
             comicImage.image = UIImage(named: vetorStrings[cont])
         }
         
