@@ -15,10 +15,12 @@ class ViewController: UIViewController
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var comicImage: UIImageView!
     var audioPlayer = AVAudioPlayer()
+    var audioPlayer2 = AVAudioPlayer()
     var sound = Sound()
     var swipe = loadSwipe()
     var cont = Int()
-    var vetorStrings = ["p1","p2","p3","p4"]
+    var vetorStrings = ["pagina01","pagina02"]
+    var vetorStringAudio = ["dinastia-p2-q1", "dinastia-p2-q2"]
     var doubleTap = true
     var location = CGPoint()
     
@@ -41,6 +43,8 @@ class ViewController: UIViewController
     
     func loadImage(vetor: [String]) {
         comicImage.image = UIImage(named: vetor[cont]) // carregar imagem na tela
+        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+        audioPlayer2.play()
     }
     
 
@@ -79,7 +83,9 @@ class ViewController: UIViewController
                 if cont < vetorStrings.count - 1 {
                     cont++
                     audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
+                    audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
                     audioPlayer.play()
+                    audioPlayer2.play()
                 }
                 
                 
@@ -92,7 +98,9 @@ class ViewController: UIViewController
                 if cont > 0 {
                     cont--
                     audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
+                    audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
                     audioPlayer.play()
+                    audioPlayer2.play()
                 }
                 
                 comicImage.image = UIImage(named: vetorStrings[cont])
@@ -129,6 +137,8 @@ class ViewController: UIViewController
             cont++
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
             audioPlayer.play()
+            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+            audioPlayer.play()
             comicImage.image = UIImage(named: vetorStrings[cont])
         }
         
@@ -141,6 +151,8 @@ class ViewController: UIViewController
         if cont > 0 {
             cont--
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
+            audioPlayer.play()
+            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
             audioPlayer.play()
             comicImage.image = UIImage(named: vetorStrings[cont])
         }

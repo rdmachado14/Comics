@@ -18,6 +18,8 @@
 		79258C4B1BA08A9900AEBC7C /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C4A1BA08A9900AEBC7C /* Sounds.swift */; };
 		A70D93821B9F6365008B19D0 /* Pagina 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */; };
 		A71C14241BA21EA800EB3BEE /* loadSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C14231BA21EA800EB3BEE /* loadSwipe.swift */; };
+		A74EE8171BA3293D007CFE8B /* dinastia-p2-q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */; settings = {ASSET_TAGS = (); }; };
+		A74EE8181BA3293D007CFE8B /* dinastia-p2-q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		79258C4A1BA08A9900AEBC7C /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pagina 1.mp3"; sourceTree = "<group>"; };
 		A71C14231BA21EA800EB3BEE /* loadSwipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadSwipe.swift; sourceTree = "<group>"; };
+		A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dinastia-p2-q1.mp3"; sourceTree = "<group>"; };
+		A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dinastia-p2-q2.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 		79258C4C1BA08AA200AEBC7C /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */,
+				A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */,
 				A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */,
 			);
 			name = Sounds;
@@ -282,10 +288,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74EE8181BA3293D007CFE8B /* dinastia-p2-q2.mp3 in Resources */,
 				A70D93821B9F6365008B19D0 /* Pagina 1.mp3 in Resources */,
 				79258C271B9F32A000AEBC7C /* LaunchScreen.storyboard in Resources */,
 				79258C241B9F32A000AEBC7C /* Assets.xcassets in Resources */,
 				79258C1F1B9F32A000AEBC7C /* Main.storyboard in Resources */,
+				A74EE8171BA3293D007CFE8B /* dinastia-p2-q1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
