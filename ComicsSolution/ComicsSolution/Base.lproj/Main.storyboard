@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Estante-->
@@ -68,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967.5" y="59.5"/>
+            <point key="canvasLocation" x="1971.5" y="59.5"/>
         </scene>
         <!--Estante-->
         <scene sceneID="6CD-8X-RAX">
@@ -91,19 +92,27 @@
                                     <rect key="frame" x="0.0" y="0.0" width="151" height="147"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-fh-Wck">
-                                            <rect key="frame" x="0.0" y="0.0" width="151" height="147"/>
-                                        </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6w-Kt-cHq">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6w-Kt-cHq">
                                             <rect key="frame" x="52" y="91" width="46" height="30"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <segue destination="BYZ-38-t0r" kind="show" id="J97-b0-fcZ"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-fh-Wck">
+                                            <rect key="frame" x="0.0" y="0.0" width="151" height="147"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="Rgg-fh-Wck" firstAttribute="leading" secondItem="b21-oj-DSS" secondAttribute="leading" id="6BI-gN-dKp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rgg-fh-Wck" secondAttribute="bottom" id="IVq-AT-4mN"/>
+                                    <constraint firstItem="p6w-Kt-cHq" firstAttribute="centerX" secondItem="Rgg-fh-Wck" secondAttribute="centerX" id="Kji-Ce-T7s"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rgg-fh-Wck" secondAttribute="trailing" id="djt-bt-LYK"/>
+                                    <constraint firstItem="p6w-Kt-cHq" firstAttribute="top" secondItem="b21-oj-DSS" secondAttribute="topMargin" constant="83" id="fO7-nz-3GP"/>
+                                    <constraint firstItem="Rgg-fh-Wck" firstAttribute="top" secondItem="b21-oj-DSS" secondAttribute="top" id="qGa-im-YqZ"/>
+                                </constraints>
                             </collectionViewCell>
                         </cells>
                         <connections>
