@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1B95A51BA6FAF500E6C055 /* AllComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B95A41BA6FAF500E6C055 /* AllComics.swift */; settings = {ASSET_TAGS = (); }; };
 		79258C1A1B9F32A000AEBC7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C191B9F32A000AEBC7C /* AppDelegate.swift */; };
 		79258C1C1B9F32A000AEBC7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C1B1B9F32A000AEBC7C /* ViewController.swift */; };
 		79258C1F1B9F32A000AEBC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79258C1D1B9F32A000AEBC7C /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E1B95A41BA6FAF500E6C055 /* AllComics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllComics.swift; sourceTree = "<group>"; };
 		79258C161B9F32A000AEBC7C /* ComicsSolution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicsSolution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79258C191B9F32A000AEBC7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79258C1B1B9F32A000AEBC7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,9 +90,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E1B95AC1BA7062C00E6C055 /* Dinastia M */ = {
+			isa = PBXGroup;
+			children = (
+				A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */,
+				A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */,
+			);
+			name = "Dinastia M";
+			sourceTree = "<group>";
+		};
 		79258C0D1B9F32A000AEBC7C = {
 			isa = PBXGroup;
 			children = (
+				5E1B95A41BA6FAF500E6C055 /* AllComics.swift */,
 				79258C181B9F32A000AEBC7C /* ComicsSolution */,
 				79258C301B9F32A100AEBC7C /* ComicsSolutionTests */,
 				79258C3B1B9F32A100AEBC7C /* ComicsSolutionUITests */,
@@ -111,11 +123,11 @@
 		79258C181B9F32A000AEBC7C /* ComicsSolution */ = {
 			isa = PBXGroup;
 			children = (
-				79258C501BA08B2600AEBC7C /* Model */,
+				79258C4D1BA08AB800AEBC7C /* Controller */,
 				79258C4F1BA08B0F00AEBC7C /* View */,
 				79258C4E1BA08B0100AEBC7C /* Other */,
-				79258C4D1BA08AB800AEBC7C /* Controller */,
 				79258C4C1BA08AA200AEBC7C /* Sounds */,
+				79258C501BA08B2600AEBC7C /* Model */,
 			);
 			path = ComicsSolution;
 			sourceTree = "<group>";
@@ -141,8 +153,7 @@
 		79258C4C1BA08AA200AEBC7C /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */,
-				A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */,
+				5E1B95AC1BA7062C00E6C055 /* Dinastia M */,
 				A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */,
 			);
 			name = Sounds;
@@ -327,6 +338,7 @@
 				7960D0411BA6F54800D3665E /* ChooseComicCollectionViewController.swift in Sources */,
 				79258C4B1BA08A9900AEBC7C /* Sounds.swift in Sources */,
 				A71C14241BA21EA800EB3BEE /* loadSwipe.swift in Sources */,
+				5E1B95A51BA6FAF500E6C055 /* AllComics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
