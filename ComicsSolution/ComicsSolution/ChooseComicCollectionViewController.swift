@@ -36,7 +36,7 @@ class ChooseComicCollectionViewController: UICollectionViewController
         
         var button = cell.viewWithTag(1) as! UIImageView // criando uma tag para cada collection
         
-        button.image = UIImage(named: "americaCapitain")
+        button.image = UIImage(named: "americaCapitain") // adicionando a imagem
         
         return cell
     }

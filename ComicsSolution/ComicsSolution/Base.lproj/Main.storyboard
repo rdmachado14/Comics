@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7T-ow-jYI">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7T-ow-jYI">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DA-67-S51">
@@ -34,7 +34,7 @@
                                             <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UV6-4n-gKb"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-rK-yLG">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-rK-yLG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="639"/>
                                     </imageView>
                                 </subviews>
@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967.5" y="68.5"/>
+            <point key="canvasLocation" x="1967.5" y="59.5"/>
         </scene>
         <!--Estante-->
         <scene sceneID="6CD-8X-RAX">
@@ -94,6 +94,13 @@
                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-fh-Wck">
                                             <rect key="frame" x="0.0" y="0.0" width="151" height="147"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6w-Kt-cHq">
+                                            <rect key="frame" x="52" y="91" width="46" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="J97-b0-fcZ"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
