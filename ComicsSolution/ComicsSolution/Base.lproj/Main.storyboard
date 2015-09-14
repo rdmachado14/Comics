@@ -8,7 +8,7 @@
         <!--Estante-->
         <scene sceneID="lgy-ag-DBN">
             <objects>
-                <viewController id="oWc-eh-l42" sceneMemberID="viewController">
+                <viewController id="oWc-eh-l42" customClass="ChooseComicCollectionViewController" customModule="ComicsSolution" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m32-99-5UY"/>
                         <viewControllerLayoutGuide type="bottom" id="N6L-5i-iiy"/>

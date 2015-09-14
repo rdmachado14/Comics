@@ -8,10 +8,13 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+
 
 class ChooseComicCollectionViewController: UICollectionViewController
 {
+    
+    private let reuseIdentifier = "cell"
+    private let sectionsInsets = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
 
     override func viewDidLoad()
     {
