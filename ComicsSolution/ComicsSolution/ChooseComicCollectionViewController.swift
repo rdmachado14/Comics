@@ -12,17 +12,9 @@ import UIKit
 
 class ChooseComicCollectionViewController: UICollectionViewController
 {
-    
-    private let reuseIdentifier = "cell"
-    private let sectionsInsets = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
-    private var searches = [ChooseComicCollectionViewController]()
-    //private let comics =
-
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
     }
 
@@ -30,6 +22,19 @@ class ChooseComicCollectionViewController: UICollectionViewController
     {
         super.didReceiveMemoryWarning()
         
+    }
+    
+    // número de collections que serão retornadas
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return 3
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    {
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
+        
+        return cell
     }
 
 }
