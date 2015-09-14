@@ -16,6 +16,7 @@
 		79258C321B9F32A100AEBC7C /* ComicsSolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C311B9F32A100AEBC7C /* ComicsSolutionTests.swift */; };
 		79258C3D1B9F32A100AEBC7C /* ComicsSolutionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C3C1B9F32A100AEBC7C /* ComicsSolutionUITests.swift */; };
 		79258C4B1BA08A9900AEBC7C /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C4A1BA08A9900AEBC7C /* Sounds.swift */; };
+		7960D0411BA6F54800D3665E /* ChooseComicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960D0401BA6F54800D3665E /* ChooseComicCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A70D93821B9F6365008B19D0 /* Pagina 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */; };
 		A71C14241BA21EA800EB3BEE /* loadSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C14231BA21EA800EB3BEE /* loadSwipe.swift */; };
 		A74EE8171BA3293D007CFE8B /* dinastia-p2-q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */; settings = {ASSET_TAGS = (); }; };
@@ -55,6 +56,7 @@
 		79258C3C1B9F32A100AEBC7C /* ComicsSolutionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsSolutionUITests.swift; sourceTree = "<group>"; };
 		79258C3E1B9F32A100AEBC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79258C4A1BA08A9900AEBC7C /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		7960D0401BA6F54800D3665E /* ChooseComicCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseComicCollectionViewController.swift; sourceTree = "<group>"; };
 		A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pagina 1.mp3"; sourceTree = "<group>"; };
 		A71C14231BA21EA800EB3BEE /* loadSwipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadSwipe.swift; sourceTree = "<group>"; };
 		A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dinastia-p2-q1.mp3"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				79258C1B1B9F32A000AEBC7C /* ViewController.swift */,
+				7960D0401BA6F54800D3665E /* ChooseComicCollectionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				79258C1C1B9F32A000AEBC7C /* ViewController.swift in Sources */,
 				79258C1A1B9F32A000AEBC7C /* AppDelegate.swift in Sources */,
 				79258C221B9F32A000AEBC7C /* ComicsSolution.xcdatamodeld in Sources */,
+				7960D0411BA6F54800D3665E /* ChooseComicCollectionViewController.swift in Sources */,
 				79258C4B1BA08A9900AEBC7C /* Sounds.swift in Sources */,
 				A71C14241BA21EA800EB3BEE /* loadSwipe.swift in Sources */,
 			);
