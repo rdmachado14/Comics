@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController
 {
 
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var comicImage: UIImageView!
     var audioPlayer = AVAudioPlayer()
@@ -19,6 +20,9 @@ class ViewController: UIViewController
     var sound = Sound()
     var swipe = loadSwipe()
     var cont = Int()
+    var verificador1 = Int()
+    var verificador2 = Int()
+    var verificador3 = Int()
     var vetorStrings = ["pagina01","pagina02"]
     var vetorStringAudio = ["dinastia-p2-q1", "dinastia-p2-q2"]
     var doubleTap = true
@@ -43,8 +47,10 @@ class ViewController: UIViewController
     
     func loadImage(vetor: [String]) {
         comicImage.image = UIImage(named: vetor[cont]) // carregar imagem na tela
-        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
-        audioPlayer2.play()
+        if verificador1 == 1{
+            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+            audioPlayer2.play()
+        }
     }
     
 
@@ -83,9 +89,12 @@ class ViewController: UIViewController
                 if cont < vetorStrings.count - 1 {
                     cont++
                     audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
-                    audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
                     audioPlayer.play()
-                    audioPlayer2.play()
+                    if verificador1 == 1{
+                        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+                    
+                        audioPlayer2.play()
+                    }
                 }
                 
                 
@@ -98,9 +107,12 @@ class ViewController: UIViewController
                 if cont > 0 {
                     cont--
                     audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
-                    audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
                     audioPlayer.play()
-                    audioPlayer2.play()
+                    if verificador1 == 1{
+                        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+                    
+                        audioPlayer2.play()
+                    }
                 }
                 
                 comicImage.image = UIImage(named: vetorStrings[cont])
@@ -137,8 +149,10 @@ class ViewController: UIViewController
             cont++
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
             audioPlayer.play()
-            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
-            audioPlayer2.play()
+            if verificador1 == 1{
+                audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+                audioPlayer2.play()
+            }
             comicImage.image = UIImage(named: vetorStrings[cont])
         }
         
@@ -152,11 +166,47 @@ class ViewController: UIViewController
             cont--
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
             audioPlayer.play()
-            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
-            audioPlayer2.play()
+            if verificador1 == 1{
+                audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+                audioPlayer2.play()
+            }
             comicImage.image = UIImage(named: vetorStrings[cont])
         }
         
+
+    }
+    
+    @IBAction func menu1(sender: AnyObject) {
+        if verificador1 == 0 {
+            verificador1 = 1
+            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+            audioPlayer2.play()
+        }else{
+            verificador1 = 0
+            audioPlayer2.stop()
+        }
+        
+        print("clicou1\t\(verificador1)")
+        
+    }
+    
+    @IBAction func menu2(sender: AnyObject) {
+        if verificador2 == 0 {
+            verificador2 = 1
+        }else{
+            verificador2 = 0
+        }
+        print("clicou2\t\(verificador2)")
+
+    }
+    @IBAction func menu3(sender: AnyObject) {
+        if verificador3 == 0 {
+            verificador3 = 1
+            
+        }else{
+            verificador3 = 0
+        }
+        print("clicou3\t\(verificador3)")
 
     }
 }
