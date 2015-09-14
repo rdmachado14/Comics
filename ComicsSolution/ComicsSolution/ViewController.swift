@@ -20,8 +20,11 @@ class ViewController: UIViewController
     var sound = Sound()
     var swipe = loadSwipe()
     var cont = Int()
-    var contAudio = Int()
+    var verificador1 = Int()
+    var verificador2 = Int()
+    var verificador3 = Int()
     var instaceAllComics: AllComics?
+    var vetorComics = ["0","1"]
     var vetorStrings = ["nada","nada"]
     var vetorStringAudio = ["nada", "nada"]
     var doubleTap = true
@@ -33,8 +36,8 @@ class ViewController: UIViewController
         swipe.loadSwipe(self.view!,ob: self)
         loadTapGesture()
         instaceAllComics = AllComics()
-        vetorStrings = instaceAllComics!.vetorComics(1) // Pegar INDEX AQUI!!!!
-        vetorStringAudio = instaceAllComics!.vetorAudio(1) // Pegar INDEX AQUI!!!!
+        vetorStrings = instaceAllComics!.vetorComics(2) // Pegar INDEX AQUI!!!!
+        vetorStringAudio = instaceAllComics!.vetorAudio(2) // Pegar INDEX AQUI!!!!
         
         loadImage(vetorStrings) // Pegar INDEX AQUI!!!!
         
@@ -49,7 +52,7 @@ class ViewController: UIViewController
     
     func loadImage(vetor: [String]) {
         comicImage.image = UIImage(named: vetor[cont]) // carregar imagem na tela
-        if(vetorStringAudio[cont] != "HQNaoEncontrada"){
+        if verificador1 == 1{
             audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
             audioPlayer2.play()
         }
@@ -89,17 +92,16 @@ class ViewController: UIViewController
             case UISwipeGestureRecognizerDirection.Right:
                 print("right")
                 
-                let vetorComics = instaceAllComics!.next()
+                vetorComics = instaceAllComics!.previous()
                 
-                if(vetorComics[0] == "end"){
+                if(vetorComics[0] != "end"){
                     audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
                     audioPlayer.play()
-                    
-                    audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
-                    audioPlayer2.play()
-                    
+                    if verificador1 == 1{
+                        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
+                        audioPlayer2.play()
+                    }
                     comicImage.image = UIImage(named: vetorComics[0])
-
                 }
                 
                 return
@@ -108,15 +110,15 @@ class ViewController: UIViewController
                 
                 print("left")
                 
-                let vetorComics = instaceAllComics!.previous()
+                let vetorComics = instaceAllComics!.next()
                 
-                if(vetorComics[0] == "end"){
+                if(vetorComics[0] != "end"){
                     audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
                     audioPlayer.play()
-                    
-                    audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
-                    audioPlayer2.play()
-                    
+                    if verificador1 == 1{
+                        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
+                        audioPlayer2.play()
+                    }
                     comicImage.image = UIImage(named: vetorComics[0])
                     
                 }
@@ -151,15 +153,14 @@ class ViewController: UIViewController
     {
         let vetorComics = instaceAllComics!.previous()
         
-        if(vetorComics[0] == "end"){
+        if(vetorComics[0] != "end"){
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
             audioPlayer.play()
-            
-            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
-            audioPlayer2.play()
-            
+            if verificador1 == 1{
+                audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
+                audioPlayer2.play()
+            }
             comicImage.image = UIImage(named: vetorComics[0])
-            
         }
         
         
@@ -170,15 +171,27 @@ class ViewController: UIViewController
     {
         let vetorComics = instaceAllComics!.next()
         
-        if(vetorComics[0] == "end"){
+        if(vetorComics[0] != "end"){
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
             audioPlayer.play()
-            
+            if verificador1 == 1{
+                audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
+                audioPlayer2.play()
+            }
+            comicImage.image = UIImage(named: vetorComics[0])
+        }
+        
+
+    }
+    
+    @IBAction func menu1(sender: AnyObject) {
+        if verificador1 == 0 {
+            verificador1 = 1
             audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
             audioPlayer2.play()
-            
-            comicImage.image = UIImage(named: vetorComics[0])
-            
+        }else{
+            verificador1 = 0
+            audioPlayer2.stop()
         }
         
         print("clicou1\t\(verificador1)")

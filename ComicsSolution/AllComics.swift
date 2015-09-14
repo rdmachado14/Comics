@@ -44,6 +44,7 @@ class AllComics {
     func next() -> [String] {
         if (cont < vetorComic.count-1){
             cont++
+            print(cont)
             return [vetorComic[cont],vetorSound[cont]]
         }else{
             return ["end"]
@@ -52,8 +53,9 @@ class AllComics {
     }
     
     func previous() -> [String] {
-        if (cont < vetorComic.count-1){
+        if (cont > 0){
             cont--
+            print(cont)
             return [vetorComic[cont],vetorSound[cont]]
         }else{
             return ["end"]
