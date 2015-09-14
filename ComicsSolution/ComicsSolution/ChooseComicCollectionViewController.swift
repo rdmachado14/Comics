@@ -15,6 +15,8 @@ class ChooseComicCollectionViewController: UICollectionViewController
     
     private let reuseIdentifier = "cell"
     private let sectionsInsets = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
+    private var searches = [ChooseComicCollectionViewController]()
+    //private let comics =
 
     override func viewDidLoad()
     {
