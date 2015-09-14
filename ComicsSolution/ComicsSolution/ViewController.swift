@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController
 {
 
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var comicImage: UIImageView!
     var audioPlayer = AVAudioPlayer()
@@ -180,6 +181,27 @@ class ViewController: UIViewController
             
         }
         
+        print("clicou1\t\(verificador1)")
+        
+    }
+    
+    @IBAction func menu2(sender: AnyObject) {
+        if verificador2 == 0 {
+            verificador2 = 1
+        }else{
+            verificador2 = 0
+        }
+        print("clicou2\t\(verificador2)")
+
+    }
+    @IBAction func menu3(sender: AnyObject) {
+        if verificador3 == 0 {
+            verificador3 = 1
+            
+        }else{
+            verificador3 = 0
+        }
+        print("clicou3\t\(verificador3)")
 
     }
 }
