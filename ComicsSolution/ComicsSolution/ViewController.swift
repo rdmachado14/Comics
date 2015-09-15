@@ -23,24 +23,29 @@ class ViewController: UIViewController
     var verificador1 = Int()
     var verificador2 = Int()
     var verificador3 = Int()
-    var vetorStrings = ["pagina01","pagina02"]
-    var vetorStringAudio = ["dinastia-p2-q1", "dinastia-p2-q2"]
+    var instaceAllComics: AllComics?
+    var vetorComics = ["0","1"]
+    var vetorStrings = ["nada","nada"]
+    var vetorStringAudio = ["nada", "nada"]
     var doubleTap = true
     var location = CGPoint()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loadImage(vetorStrings)
         swipe.loadSwipe(self.view!,ob: self)
         loadTapGesture()
+        instaceAllComics = AllComics()
+        vetorStrings = instaceAllComics!.vetorComics(2) // Pegar INDEX AQUI!!!!
+        vetorStringAudio = instaceAllComics!.vetorAudio(2) // Pegar INDEX AQUI!!!!
         
+        loadImage(vetorStrings) // Pegar INDEX AQUI!!!!
         
         self.scrollView.minimumZoomScale = 1.0;
         self.scrollView.maximumZoomScale = 6.0;
         
     }
-
+    
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
     }
@@ -86,36 +91,37 @@ class ViewController: UIViewController
             switch swipeGesture.direction{
             case UISwipeGestureRecognizerDirection.Right:
                 print("right")
-                if cont < vetorStrings.count - 1 {
-                    cont++
+                
+                vetorComics = instaceAllComics!.previous()
+                
+                if(vetorComics[0] != "end"){
                     audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
                     audioPlayer.play()
                     if verificador1 == 1{
-                        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
-                    
+                        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
                         audioPlayer2.play()
                     }
+                    comicImage.image = UIImage(named: vetorComics[0])
                 }
                 
-                
-                comicImage.image = UIImage(named: vetorStrings[cont])
                 return
                 
             case UISwipeGestureRecognizerDirection.Left:
                 
                 print("left")
-                if cont > 0 {
-                    cont--
+                
+                let vetorComics = instaceAllComics!.next()
+                
+                if(vetorComics[0] != "end"){
                     audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
                     audioPlayer.play()
                     if verificador1 == 1{
-                        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
-                    
+                        audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
                         audioPlayer2.play()
                     }
+                    comicImage.image = UIImage(named: vetorComics[0])
+                    
                 }
-                
-                comicImage.image = UIImage(named: vetorStrings[cont])
 
                 
                 return
@@ -145,15 +151,16 @@ class ViewController: UIViewController
     
     @IBAction func previous(gesture: AnyObject)
     {
-        if cont < vetorStrings.count - 1 {
-            cont++
+        let vetorComics = instaceAllComics!.previous()
+        
+        if(vetorComics[0] != "end"){
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
             audioPlayer.play()
             if verificador1 == 1{
-                audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+                audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
                 audioPlayer2.play()
             }
-            comicImage.image = UIImage(named: vetorStrings[cont])
+            comicImage.image = UIImage(named: vetorComics[0])
         }
         
         
@@ -162,15 +169,16 @@ class ViewController: UIViewController
     
     @IBAction func next(sender: AnyObject)
     {
-        if cont > 0 {
-            cont--
+        let vetorComics = instaceAllComics!.next()
+        
+        if(vetorComics[0] != "end"){
             audioPlayer = sound.setupAudioPlayerWithFile("Pagina 1")
             audioPlayer.play()
             if verificador1 == 1{
-                audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+                audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
                 audioPlayer2.play()
             }
-            comicImage.image = UIImage(named: vetorStrings[cont])
+            comicImage.image = UIImage(named: vetorComics[0])
         }
         
 
@@ -179,7 +187,7 @@ class ViewController: UIViewController
     @IBAction func menu1(sender: AnyObject) {
         if verificador1 == 0 {
             verificador1 = 1
-            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
             audioPlayer2.play()
         }else{
             verificador1 = 0
