@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E1B95A41BA6FAF500E6C055 /* AllComics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllComics.swift; sourceTree = "<group>"; };
+		5E1B95A41BA6FAF500E6C055 /* AllComics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllComics.swift; path = ../AllComics.swift; sourceTree = "<group>"; };
 		79258C161B9F32A000AEBC7C /* ComicsSolution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicsSolution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79258C191B9F32A000AEBC7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79258C1B1B9F32A000AEBC7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +102,6 @@
 		79258C0D1B9F32A000AEBC7C = {
 			isa = PBXGroup;
 			children = (
-				5E1B95A41BA6FAF500E6C055 /* AllComics.swift */,
 				79258C181B9F32A000AEBC7C /* ComicsSolution */,
 				79258C301B9F32A100AEBC7C /* ComicsSolutionTests */,
 				79258C3B1B9F32A100AEBC7C /* ComicsSolutionUITests */,
@@ -171,6 +170,7 @@
 		79258C4E1BA08B0100AEBC7C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5E1B95A41BA6FAF500E6C055 /* AllComics.swift */,
 				79258C4A1BA08A9900AEBC7C /* Sounds.swift */,
 				79258C191B9F32A000AEBC7C /* AppDelegate.swift */,
 				79258C231B9F32A000AEBC7C /* Assets.xcassets */,
