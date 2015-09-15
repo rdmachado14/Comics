@@ -25,8 +25,9 @@ class ViewController: UIViewController
     var verificador3 = Int()
     var instaceAllComics: AllComics?
     var vetorComics = ["0","1"]
-    var vetorStrings = ["nada","nada"]
-    var vetorStringAudio = ["nada", "nada"]
+    var vetorStrings = ["pagina01", "pagina02"]
+
+    var vetorStringAudio = ["dinastia-p2-q1","dinastia-p2-q2"]
     var doubleTap = true
     var location = CGPoint()
     
@@ -41,6 +42,8 @@ class ViewController: UIViewController
         
         loadImage(vetorStrings) // Pegar INDEX AQUI!!!!
         
+        vetorComics = (instaceAllComics?.current())!
+            
         self.scrollView.minimumZoomScale = 1.0;
         self.scrollView.maximumZoomScale = 6.0;
         
@@ -185,6 +188,9 @@ class ViewController: UIViewController
     }
     
     @IBAction func menu1(sender: AnyObject) {
+        print("Verificador1: ",verificador1)
+        print("audioPlayer : ",vetorComics[1])
+        print("      ibagem: ",vetorComics[0])
         if verificador1 == 0 {
             verificador1 = 1
             audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])

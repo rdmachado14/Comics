@@ -33,7 +33,7 @@ class AllComics {
     func vetorAudio(Index: Int) -> [String]{
         switch Index{
         case 2:
-            vetorSound = ["dinastia-p2-q1","dinastia-p2-q1"]
+            vetorSound = ["dinastia-p2-q1","dinastia-p2-q2"]
             return vetorSound
         default:
             vetorSound = ["HQNaoEncontrada"]
@@ -60,5 +60,9 @@ class AllComics {
         }else{
             return ["end"]
         }
+    }
+    
+    func current() -> [String] {
+        return [vetorComic[cont],vetorSound[cont]]
     }
 }
