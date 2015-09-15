@@ -242,11 +242,11 @@
             </objects>
             <point key="canvasLocation" x="658.5" y="823.5"/>
         </scene>
-        <!--Estante-->
+        <!--Navigation Controller-->
         <scene sceneID="1Cq-pd-5De">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="33g-dY-XbG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Estante" id="pel-A5-KRU"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="pel-A5-KRU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iy6-Va-dc6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
