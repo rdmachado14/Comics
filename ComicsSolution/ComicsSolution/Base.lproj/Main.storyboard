@@ -43,21 +43,17 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commands_bg" translatesAutoresizingMaskIntoConstraints="NO" id="HRw-iK-Zxg">
                                         <rect key="frame" x="2" y="8" width="99" height="270"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yps-1m-OIA">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yps-1m-OIA">
                                         <rect key="frame" x="8" y="29" width="66" height="67"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="EUV-oR-DMm"/>
                                         </constraints>
-                                        <state key="normal" image="description_off"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Teste" image="description_off"/>
+                                        <state key="disabled" title="Teste"/>
+                                        <state key="highlighted" title="Teste"/>
                                         <connections>
                                             <action selector="menu1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0IP-BO-abR"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk9-3i-ZPZ">
-                                        <rect key="frame" x="8" y="193" width="66" height="66"/>
-                                        <state key="normal" image="repeat"/>
-                                        <connections>
-                                            <action selector="menu3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emm-JD-djN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2w-Mt-nxl">
@@ -65,6 +61,13 @@
                                         <state key="normal" image="speaking_off"/>
                                         <connections>
                                             <action selector="menu2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCA-rv-iOK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk9-3i-ZPZ">
+                                        <rect key="frame" x="8" y="193" width="66" height="66"/>
+                                        <state key="normal" image="repeat"/>
+                                        <connections>
+                                            <action selector="menu3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emm-JD-djN"/>
                                         </connections>
                                     </button>
                                 </subviews>
