@@ -60,7 +60,7 @@
 		79258C4A1BA08A9900AEBC7C /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		7960D0401BA6F54800D3665E /* ChooseComicCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseComicCollectionViewController.swift; sourceTree = "<group>"; };
 		A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pagina 1.mp3"; sourceTree = "<group>"; };
-		A71C14231BA21EA800EB3BEE /* loadSwipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadSwipe.swift; sourceTree = "<group>"; };
+		A71C14231BA21EA800EB3BEE /* loadSwipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = loadSwipe.swift; path = ComicsSolution/loadSwipe.swift; sourceTree = "<group>"; };
 		A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dinastia-p2-q1.mp3"; sourceTree = "<group>"; };
 		A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dinastia-p2-q2.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +106,7 @@
 				79258C301B9F32A100AEBC7C /* ComicsSolutionTests */,
 				79258C3B1B9F32A100AEBC7C /* ComicsSolutionUITests */,
 				79258C171B9F32A000AEBC7C /* Products */,
+				A71C14231BA21EA800EB3BEE /* loadSwipe.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,7 +175,6 @@
 				79258C4A1BA08A9900AEBC7C /* Sounds.swift */,
 				79258C191B9F32A000AEBC7C /* AppDelegate.swift */,
 				79258C231B9F32A000AEBC7C /* Assets.xcassets */,
-				A71C14231BA21EA800EB3BEE /* loadSwipe.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
