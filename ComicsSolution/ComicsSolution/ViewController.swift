@@ -223,5 +223,10 @@ class ViewController: UIViewController
         print("clicou3\t\(verificador3)")
 
     }
+    
+    @IBAction func info(sender: AnyObject)
+    {
+        print("Clicou na info!")
+    }
 }
 

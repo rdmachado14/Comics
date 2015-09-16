@@ -118,7 +118,11 @@
                                                 <segue destination="cSe-lB-LuS" kind="show" id="9z6-tb-gYG"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="info" id="Ibp-E1-ndx"/>
+                                        <barButtonItem key="rightBarButtonItem" title="info" id="Ibp-E1-ndx">
+                                            <connections>
+                                                <action selector="info:" destination="BYZ-38-t0r" id="p6B-SE-Reg"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
