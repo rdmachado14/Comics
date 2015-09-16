@@ -45,16 +45,18 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yps-1m-OIA">
                                         <rect key="frame" x="8" y="29" width="66" height="67"/>
+                                        <accessibility key="accessibilityConfiguration" label="descrição"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="EUV-oR-DMm"/>
                                         </constraints>
-                                        <state key="normal" image="descrição"/>
+                                        <state key="normal" image="description"/>
                                         <connections>
                                             <action selector="menu1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0IP-BO-abR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2w-Mt-nxl">
                                         <rect key="frame" x="8" y="113" width="66" height="66"/>
+                                        <accessibility key="accessibilityConfiguration" label="fala"/>
                                         <state key="normal" image="fala"/>
                                         <connections>
                                             <action selector="menu2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCA-rv-iOK"/>
@@ -62,6 +64,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk9-3i-ZPZ">
                                         <rect key="frame" x="8" y="193" width="66" height="66"/>
+                                        <accessibility key="accessibilityConfiguration" label="repetir"/>
                                         <state key="normal" image="repete"/>
                                         <connections>
                                             <action selector="menu3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emm-JD-djN"/>
@@ -267,7 +270,7 @@
     </scenes>
     <resources>
         <image name="commands_bg" width="108" height="261"/>
-        <image name="descrição" width="66" height="66"/>
+        <image name="description" width="66" height="66"/>
         <image name="fala" width="66" height="66"/>
         <image name="repete" width="66" height="66"/>
     </resources>
