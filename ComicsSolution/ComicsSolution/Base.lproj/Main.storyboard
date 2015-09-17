@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7T-ow-jYI">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7T-ow-jYI">
                                 <rect key="frame" x="0.0" y="63" width="375" height="509"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-rK-yLG">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-rK-yLG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="509"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
@@ -87,7 +87,9 @@
                                     <constraint firstItem="oFh-3S-2zt" firstAttribute="leading" secondItem="Gip-rK-yLG" secondAttribute="leading" id="Df4-pa-7q4"/>
                                     <constraint firstItem="Gip-rK-yLG" firstAttribute="centerX" secondItem="i7T-ow-jYI" secondAttribute="centerX" id="DyG-Hx-e2J"/>
                                     <constraint firstItem="Gip-rK-yLG" firstAttribute="top" secondItem="i7T-ow-jYI" secondAttribute="top" id="JWj-Ox-7tT"/>
+                                    <constraint firstItem="vLh-uu-78J" firstAttribute="centerX" secondItem="Gip-rK-yLG" secondAttribute="centerX" id="Mx2-cK-dkE"/>
                                     <constraint firstItem="oFh-3S-2zt" firstAttribute="top" secondItem="i7T-ow-jYI" secondAttribute="top" constant="81" id="Q04-vt-N1a"/>
+                                    <constraint firstAttribute="bottom" secondItem="vLh-uu-78J" secondAttribute="bottom" constant="26" id="VI4-3g-wnt"/>
                                     <constraint firstAttribute="bottom" secondItem="Gip-rK-yLG" secondAttribute="bottom" id="cen-ez-46J"/>
                                     <constraint firstItem="Gip-rK-yLG" firstAttribute="centerY" secondItem="i7T-ow-jYI" secondAttribute="centerY" id="fjz-Ej-4kF"/>
                                     <constraint firstItem="Gip-rK-yLG" firstAttribute="leading" secondItem="i7T-ow-jYI" secondAttribute="leading" id="kjb-OX-Wog"/>
@@ -107,7 +109,7 @@
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UV6-4n-gKb"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-VA-vpP">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-VA-vpP">
                                 <rect key="frame" x="0.0" y="19" width="375" height="44"/>
                                 <color key="barTintColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -117,7 +119,11 @@
                                                 <segue destination="cSe-lB-LuS" kind="show" id="9z6-tb-gYG"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="info" id="Ibp-E1-ndx"/>
+                                        <barButtonItem key="rightBarButtonItem" title="info" id="Ibp-E1-ndx">
+                                            <connections>
+                                                <action selector="info:" destination="BYZ-38-t0r" id="p6B-SE-Reg"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

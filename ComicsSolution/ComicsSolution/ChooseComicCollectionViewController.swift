@@ -12,7 +12,11 @@ import UIKit
 
 class ChooseComicCollectionViewController: UICollectionViewController
 {
-    var array = [String]()
+    //var array = [String]()
+    let container = UIView()
+    let redSquare = UIView()
+    let blueSquare = UIView()
+    
     
     override func viewDidLoad()
     {
@@ -32,13 +36,14 @@ class ChooseComicCollectionViewController: UICollectionViewController
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
         
-        var button = cell.viewWithTag(1) as! UIImageView // criando uma tag para cada collection
+        let buttonImage = cell.viewWithTag(1) as! UIImageView // criando uma tag para cada collection
         
-        button.image = UIImage(named: "americaCapitain") // adicionando a imagem
+        buttonImage.image = UIImage(named: "americaCapitain") // adicionando a imagem
         
         return cell
     }
-
+    
+    
 }
