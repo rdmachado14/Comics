@@ -13,6 +13,10 @@ import UIKit
 class ChooseComicCollectionViewController: UICollectionViewController
 {
     var array = [String]()
+    let container = UIView()
+    let redSquare = UIView()
+    let blueSquare = UIView()
+    
     
     override func viewDidLoad()
     {
@@ -39,6 +43,12 @@ class ChooseComicCollectionViewController: UICollectionViewController
         button.image = UIImage(named: "americaCapitain") // adicionando a imagem
         
         return cell
+    }
+    
+    // animação ao tocar no botão
+    @IBAction func buttonAnimation(sender: AnyObject)
+    {
+        
     }
 
 }

@@ -181,6 +181,7 @@
                                             <rect key="frame" x="1" y="0.0" width="151" height="221"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
+                                                <action selector="buttonAnimation:" destination="nmG-Pq-XXx" eventType="touchUpInside" id="ApD-H5-Wgv"/>
                                                 <segue destination="BYZ-38-t0r" kind="showDetail" id="5Ym-Ed-PCa"/>
                                             </connections>
                                         </button>
