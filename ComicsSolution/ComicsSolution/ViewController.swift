@@ -224,9 +224,33 @@ class ViewController: UIViewController
 
     }
     
+    // função a fazer
     @IBAction func info(sender: AnyObject)
     {
         print("Clicou na info!")
+    }
+    
+    @IBAction func animation(sender: AnyObject)
+    {
+        for i in 0...5
+        {
+            view.addSubview(comicImage)
+            
+            let randomYOffset = CGFloat(arc4random_uniform(150))
+            let path = UIBezierPath()
+            path.moveToPoint(CGPoint(x: 16, y: 239 + randomYOffset))
+            path.addCurveToPoint(CGPoint(x: 301, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
+            
+            let anim = CAKeyframeAnimation(keyPath: "position")
+            anim.path = path.CGPath
+            anim.rotationMode = kCAAnimationRotateAuto
+            anim.repeatCount = Float.infinity
+            anim.duration = 5.0
+            
+            // add the animation
+            comicImage.layer.addAnimation(anim, forKey: "animate position along path")
+        
+        }
     }
 }
 
