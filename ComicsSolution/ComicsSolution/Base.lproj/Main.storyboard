@@ -174,17 +174,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="153" height="221"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-fh-Wck">
-                                            <rect key="frame" x="1" y="0.0" width="151" height="221"/>
-                                        </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6w-Kt-cHq">
                                             <rect key="frame" x="1" y="0.0" width="151" height="221"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
-                                                <action selector="buttonAnimation:" destination="nmG-Pq-XXx" eventType="touchUpInside" id="ApD-H5-Wgv"/>
                                                 <segue destination="BYZ-38-t0r" kind="showDetail" id="5Ym-Ed-PCa"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-fh-Wck">
+                                            <rect key="frame" x="1" y="0.0" width="151" height="221"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>

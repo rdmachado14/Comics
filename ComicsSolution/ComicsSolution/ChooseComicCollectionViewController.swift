@@ -12,7 +12,7 @@ import UIKit
 
 class ChooseComicCollectionViewController: UICollectionViewController
 {
-    var array = [String]()
+    //var array = [String]()
     let container = UIView()
     let redSquare = UIView()
     let blueSquare = UIView()
@@ -38,17 +38,12 @@ class ChooseComicCollectionViewController: UICollectionViewController
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
         
-        let button = cell.viewWithTag(1) as! UIImageView // criando uma tag para cada collection
+        let buttonImage = cell.viewWithTag(1) as! UIImageView // criando uma tag para cada collection
         
-        button.image = UIImage(named: "americaCapitain") // adicionando a imagem
+        buttonImage.image = UIImage(named: "americaCapitain") // adicionando a imagem
         
         return cell
     }
     
-    // animação ao tocar no botão
-    @IBAction func buttonAnimation(sender: AnyObject)
-    {
-        
-    }
-
+    
 }
