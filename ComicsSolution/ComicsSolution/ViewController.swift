@@ -28,6 +28,9 @@ class ViewController: UIViewController
     var verificador2 = Int()
     var verificador3 = Int()
     var instaceAllComics: AllComics?
+    
+    var  darplay2 = true
+    
     var vetorComics = ["0","1","2"]
     var vetorStrings = ["pagina01", "pagina02"]
 
@@ -35,19 +38,7 @@ class ViewController: UIViewController
     var vetorStringFala = ["estranho", "audio-p2-q2"]
     var doubleTap = true
     var location = CGPoint()
-    
-    var playerQueue : AVQueuePlayer = {
-        
-        var url1 = NSBundle.mainBundle().URLForResource("dinastia-p2-q1", withExtension: "mp3")
-        var url2 = NSBundle.mainBundle().URLForResource("Estranho", withExtension: "mp3")
-        
-        let item1 = AVPlayerItem(URL: url1!)
-        let item2 = AVPlayerItem(URL: url2!)
-        
-        let queue = AVQueuePlayer(items: [item1, item2])
-        return queue
-        
-    }()
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -64,7 +55,19 @@ class ViewController: UIViewController
             
         self.scrollView.minimumZoomScale = 1.0;
         self.scrollView.maximumZoomScale = 6.0;
-        playerQueue.play()
+    }
+    
+    func update(){
+        if audioPlayer2.playing {
+            
+        } else {
+            if(verificador2==1 && darplay2){
+                darplay2 = false
+                print(audioPlayer3)
+                audioPlayer3.play()
+                
+            }
+        }
     }
     
     override func didReceiveMemoryWarning(){
@@ -124,6 +127,7 @@ class ViewController: UIViewController
                         audioPlayer2.play()
                     }
                     if verificador2 == 1 {
+                        darplay2 = true
                         audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
                         audioPlayer3.playAtTime(0.20)
                     }
@@ -148,6 +152,7 @@ class ViewController: UIViewController
                     if verificador2 == 1 {
                         audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
                         audioPlayer3.playAtTime(35)
+                        darplay2 = true
                     }
                     comicImage.image = UIImage(named: vetorComics[0])
                     
@@ -191,8 +196,9 @@ class ViewController: UIViewController
                 audioPlayer2.play()
             }
             if verificador2 == 2 {
+                darplay2 = true
                 audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
-                audioPlayer3.play()
+                //audioPlayer3.play()
             }
             comicImage.image = UIImage(named: vetorComics[0])
         }
@@ -213,8 +219,9 @@ class ViewController: UIViewController
                 audioPlayer2.play()
             }
             if verificador2 == 2 {
+                darplay2 = true
                 audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
-                audioPlayer3.play()
+                //audioPlayer3.play()
             }
             comicImage.image = UIImage(named: vetorComics[0])
         }
@@ -231,6 +238,7 @@ class ViewController: UIViewController
             vetorComics = (instaceAllComics?.current())!
             audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
             audioPlayer2.play()
+            NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector:"update",userInfo:nil, repeats: true)
         }else{
             verificador1 = 0
             audioPlayer2.stop()
@@ -242,13 +250,13 @@ class ViewController: UIViewController
     
     @IBAction func menu2(sender: AnyObject) {
         if verificador2 == 0 {
-            
             verificador2 = 1
             vetorComics = (instaceAllComics?.current())!
             print(vetorComics[2])
             audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
+            if !audioPlayer2.playing{
             audioPlayer3.play()
-            
+            }
         }else{
             verificador2 = 0
             audioPlayer3.stop()
