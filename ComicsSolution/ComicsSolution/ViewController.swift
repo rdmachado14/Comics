@@ -265,13 +265,28 @@ class ViewController: UIViewController
 
     }
     @IBAction func menu3(sender: AnyObject) {
-        if verificador3 == 0 {
-            verificador3 = 1
-            
+        
+        if verificador2 == 1 && verificador1 == 1 {
+            audioPlayer2.stop()
+            audioPlayer3.stop()
+            vetorComics = (instaceAllComics?.current())!
+            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
+            darplay2 = true
+            audioPlayer2.play()
+        }else if verificador2 == 1{
+            audioPlayer3.stop()
+            vetorComics = (instaceAllComics?.current())!
+            audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
+            audioPlayer3.play()
+        }else if verificador1 == 1 {
+            audioPlayer2.stop()
+            vetorComics = (instaceAllComics?.current())!
+            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
+            audioPlayer2.play()
         }else{
-            verificador3 = 0
+            print("clicou3\t\(verificador3)")
         }
-        print("clicou3\t\(verificador3)")
+
 
     }
 }
