@@ -56,7 +56,8 @@ class ViewController: UIViewController
     func loadImage(vetor: [String]) {
         comicImage.image = UIImage(named: vetor[cont]) // carregar imagem na tela
         if verificador1 == 1{
-            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorStringAudio[cont])
+            vetorComics = (instaceAllComics?.current())!
+            audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
             audioPlayer2.play()
         }
     }
@@ -81,7 +82,7 @@ class ViewController: UIViewController
             //let Touch = gesture.locationOfTouch(1, inView: scrollView)
             //print(Touch.x);
             //print(Touch.y);
-            self.scrollView.zoomToRect(CGRect(x: gesture.locationOfTouch(0, inView: scrollView.viewForBaselineLayout()).x, y: gesture.locationOfTouch(0, inView: scrollView.viewForBaselineLayout() ).y, width: 2, height: 2), animated: true)
+            self.scrollView.zoomToRect(CGRect(x: gesture.locationOfTouch(0, inView: scrollView.viewForBaselineLayout()).x, y: gesture.locationOfTouch(0, inView: scrollView.viewForBaselineLayout()).y, width: 2, height: 2), animated: true)
             print(scrollView.zoomScale)
             doubleTap = true;
             print(location);
@@ -193,6 +194,7 @@ class ViewController: UIViewController
         print("      ibagem: ",vetorComics[0])
         if verificador1 == 0 {
             verificador1 = 1
+            vetorComics = (instaceAllComics?.current())!
             audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
             audioPlayer2.play()
         }else{
