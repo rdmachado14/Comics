@@ -22,6 +22,8 @@
 		A71C14241BA21EA800EB3BEE /* loadSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C14231BA21EA800EB3BEE /* loadSwipe.swift */; };
 		A74EE8171BA3293D007CFE8B /* dinastia-p2-q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */; };
 		A74EE8181BA3293D007CFE8B /* dinastia-p2-q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */; };
+		A754A2741BAAF17B0056AD6E /* audio-p2-q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A754A2731BAAF17B0056AD6E /* audio-p2-q2.mp3 */; settings = {ASSET_TAGS = (); }; };
+		A754A2761BAAF2970056AD6E /* Estranho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A754A2751BAAF2970056AD6E /* Estranho.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		A71C14231BA21EA800EB3BEE /* loadSwipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = loadSwipe.swift; path = ComicsSolution/loadSwipe.swift; sourceTree = "<group>"; };
 		A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dinastia-p2-q1.mp3"; sourceTree = "<group>"; };
 		A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dinastia-p2-q2.mp3"; sourceTree = "<group>"; };
+		A754A2731BAAF17B0056AD6E /* audio-p2-q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "audio-p2-q2.mp3"; sourceTree = "<group>"; };
+		A754A2751BAAF2970056AD6E /* Estranho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Estranho.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,8 @@
 		A754A2721BA9B9330056AD6E /* falas */ = {
 			isa = PBXGroup;
 			children = (
+				A754A2751BAAF2970056AD6E /* Estranho.mp3 */,
+				A754A2731BAAF17B0056AD6E /* audio-p2-q2.mp3 */,
 			);
 			name = falas;
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 				79258C271B9F32A000AEBC7C /* LaunchScreen.storyboard in Resources */,
 				79258C241B9F32A000AEBC7C /* Assets.xcassets in Resources */,
 				79258C1F1B9F32A000AEBC7C /* Main.storyboard in Resources */,
+				A754A2741BAAF17B0056AD6E /* audio-p2-q2.mp3 in Resources */,
+				A754A2761BAAF2970056AD6E /* Estranho.mp3 in Resources */,
 				A74EE8171BA3293D007CFE8B /* dinastia-p2-q1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

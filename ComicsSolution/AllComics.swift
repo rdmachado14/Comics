@@ -13,6 +13,7 @@ class AllComics {
      var Index = Int()
      var vetorComic = [String]()
      var vetorSound = [String]()
+     var vetorFala = [String]()
     
     func vetorComics(index: Int) -> [String]{
         cont = 0
@@ -41,11 +42,22 @@ class AllComics {
         }
     }
     
+    func vetorFala(Index: Int) -> [String]{
+        switch Index{
+        case 2:
+            vetorFala = ["Estranho", "audio-p2-q2"]
+            return vetorFala
+        default:
+            vetorFala = ["HQNaoEncontrada"]
+            return vetorFala
+        }
+    }
+    
     func next() -> [String] {
         if (cont < vetorComic.count-1){
             cont++
             print(cont)
-            return [vetorComic[cont],vetorSound[cont]]
+            return [vetorComic[cont],vetorSound[cont], vetorFala[cont]]
         }else{
             return ["end"]
         }
@@ -56,13 +68,13 @@ class AllComics {
         if (cont > 0){
             cont--
             print(cont)
-            return [vetorComic[cont],vetorSound[cont]]
+            return [vetorComic[cont],vetorSound[cont], vetorFala[cont]]
         }else{
             return ["end"]
         }
     }
     
     func current() -> [String] {
-        return [vetorComic[cont],vetorSound[cont]]
+        return [vetorComic[cont],vetorSound[cont],vetorFala[cont]]
     }
 }

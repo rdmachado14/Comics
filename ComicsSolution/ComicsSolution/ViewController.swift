@@ -13,10 +13,14 @@ class ViewController: UIViewController
 {
 
     
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var comicImage: UIImageView!
     var audioPlayer = AVAudioPlayer()
     var audioPlayer2 = AVAudioPlayer()
+    var audioPlayer3 = AVAudioPlayer()
+
+
     var sound = Sound()
     var swipe = loadSwipe()
     var cont = Int()
@@ -24,13 +28,26 @@ class ViewController: UIViewController
     var verificador2 = Int()
     var verificador3 = Int()
     var instaceAllComics: AllComics?
-    var vetorComics = ["0","1"]
+    var vetorComics = ["0","1","2"]
     var vetorStrings = ["pagina01", "pagina02"]
 
     var vetorStringAudio = ["dinastia-p2-q1","dinastia-p2-q2"]
+    var vetorStringFala = ["estranho", "audio-p2-q2"]
     var doubleTap = true
     var location = CGPoint()
     
+    var playerQueue : AVQueuePlayer = {
+        
+        var url1 = NSBundle.mainBundle().URLForResource("dinastia-p2-q1", withExtension: "mp3")
+        var url2 = NSBundle.mainBundle().URLForResource("Estranho", withExtension: "mp3")
+        
+        let item1 = AVPlayerItem(URL: url1!)
+        let item2 = AVPlayerItem(URL: url2!)
+        
+        let queue = AVQueuePlayer(items: [item1, item2])
+        return queue
+        
+    }()
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -39,6 +56,7 @@ class ViewController: UIViewController
         instaceAllComics = AllComics()
         vetorStrings = instaceAllComics!.vetorComics(2) // Pegar INDEX AQUI!!!!
         vetorStringAudio = instaceAllComics!.vetorAudio(2) // Pegar INDEX AQUI!!!!
+        vetorStringFala = instaceAllComics!.vetorFala(2)  //Pegar INDEX AQUI!!!!
         
         loadImage(vetorStrings) // Pegar INDEX AQUI!!!!
         
@@ -46,7 +64,7 @@ class ViewController: UIViewController
             
         self.scrollView.minimumZoomScale = 1.0;
         self.scrollView.maximumZoomScale = 6.0;
-        
+        playerQueue.play()
     }
     
     override func didReceiveMemoryWarning(){
@@ -105,6 +123,10 @@ class ViewController: UIViewController
                         audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
                         audioPlayer2.play()
                     }
+                    if verificador2 == 1 {
+                        audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
+                        audioPlayer3.playAtTime(0.20)
+                    }
                     comicImage.image = UIImage(named: vetorComics[0])
                 }
                 
@@ -122,6 +144,10 @@ class ViewController: UIViewController
                     if verificador1 == 1{
                         audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
                         audioPlayer2.play()
+                    }
+                    if verificador2 == 1 {
+                        audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
+                        audioPlayer3.playAtTime(35)
                     }
                     comicImage.image = UIImage(named: vetorComics[0])
                     
@@ -164,6 +190,10 @@ class ViewController: UIViewController
                 audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
                 audioPlayer2.play()
             }
+            if verificador2 == 2 {
+                audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
+                audioPlayer3.play()
+            }
             comicImage.image = UIImage(named: vetorComics[0])
         }
         
@@ -181,6 +211,10 @@ class ViewController: UIViewController
             if verificador1 == 1{
                 audioPlayer2 = sound.setupAudioPlayerWithFile(vetorComics[1])
                 audioPlayer2.play()
+            }
+            if verificador2 == 2 {
+                audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
+                audioPlayer3.play()
             }
             comicImage.image = UIImage(named: vetorComics[0])
         }
@@ -208,9 +242,16 @@ class ViewController: UIViewController
     
     @IBAction func menu2(sender: AnyObject) {
         if verificador2 == 0 {
+            
             verificador2 = 1
+            vetorComics = (instaceAllComics?.current())!
+            print(vetorComics[2])
+            audioPlayer3 = sound.setupAudioPlayerWithFile(vetorComics[2])
+            audioPlayer3.play()
+            
         }else{
             verificador2 = 0
+            audioPlayer3.stop()
         }
         print("clicou2\t\(verificador2)")
 
