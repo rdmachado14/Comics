@@ -74,11 +74,11 @@
                                             <constraint firstItem="HRw-iK-Zxg" firstAttribute="leading" secondItem="oFh-3S-2zt" secondAttribute="leading" constant="7" id="wg2-YP-P87"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLh-uu-78J">
-                                        <rect key="frame" x="153" y="453" width="68" height="30"/>
-                                        <state key="normal" title="Animação"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DA-67-S51">
+                                        <rect key="frame" x="22" y="453" width="56" height="30"/>
+                                        <state key="normal" title="Anterior"/>
                                         <connections>
-                                            <action selector="animation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hyO-4T-OwN"/>
+                                            <action selector="previous:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9d-Sg-V3J"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -130,16 +130,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ePY-VA-vpP" firstAttribute="bottom" secondItem="i7T-ow-jYI" secondAttribute="top" id="CBz-0A-6Ej"/>
-                            <constraint firstItem="i7T-ow-jYI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="L5z-KQ-E1e"/>
-                            <constraint firstItem="RBa-Gu-2qQ" firstAttribute="baseline" secondItem="8DA-67-S51" secondAttribute="baseline" id="P1e-nx-jLj"/>
-                            <constraint firstItem="8DA-67-S51" firstAttribute="top" secondItem="i7T-ow-jYI" secondAttribute="bottom" constant="-56" id="RQj-HO-TTq"/>
+                            <constraint firstItem="i7T-ow-jYI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="63" id="L5z-KQ-E1e"/>
                             <constraint firstAttribute="trailing" secondItem="i7T-ow-jYI" secondAttribute="trailing" id="VQE-Rh-VRx"/>
-                            <constraint firstItem="i7T-ow-jYI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-95" id="YdA-j2-Uun"/>
-                            <constraint firstItem="ePY-VA-vpP" firstAttribute="trailing" secondItem="i7T-ow-jYI" secondAttribute="trailing" id="fLQ-7D-ZLq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RBa-Gu-2qQ" secondAttribute="trailing" constant="-12" id="lbA-NV-LBi"/>
-                            <constraint firstItem="ePY-VA-vpP" firstAttribute="leading" secondItem="i7T-ow-jYI" secondAttribute="leading" id="pQs-qo-kFJ"/>
-                            <constraint firstItem="8DA-67-S51" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rtU-9v-rvu"/>
+                            <constraint firstItem="i7T-ow-jYI" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="18" id="YdA-j2-Uun"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RBa-Gu-2qQ" secondAttribute="trailing" constant="-8" id="lbA-NV-LBi"/>
                             <constraint firstItem="i7T-ow-jYI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vYL-WQ-IeB"/>
                         </constraints>
                     </view>
