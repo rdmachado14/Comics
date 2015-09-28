@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E1B95A51BA6FAF500E6C055 /* AllComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B95A41BA6FAF500E6C055 /* AllComics.swift */; settings = {ASSET_TAGS = (); }; };
+		5E1B95A51BA6FAF500E6C055 /* AllComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B95A41BA6FAF500E6C055 /* AllComics.swift */; };
 		79258C1A1B9F32A000AEBC7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C191B9F32A000AEBC7C /* AppDelegate.swift */; };
 		79258C1C1B9F32A000AEBC7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C1B1B9F32A000AEBC7C /* ViewController.swift */; };
 		79258C1F1B9F32A000AEBC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79258C1D1B9F32A000AEBC7C /* Main.storyboard */; };
@@ -17,11 +17,13 @@
 		79258C321B9F32A100AEBC7C /* ComicsSolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C311B9F32A100AEBC7C /* ComicsSolutionTests.swift */; };
 		79258C3D1B9F32A100AEBC7C /* ComicsSolutionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C3C1B9F32A100AEBC7C /* ComicsSolutionUITests.swift */; };
 		79258C4B1BA08A9900AEBC7C /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79258C4A1BA08A9900AEBC7C /* Sounds.swift */; };
-		7960D0411BA6F54800D3665E /* ChooseComicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960D0401BA6F54800D3665E /* ChooseComicCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7960D0411BA6F54800D3665E /* ChooseComicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960D0401BA6F54800D3665E /* ChooseComicCollectionViewController.swift */; };
 		A70D93821B9F6365008B19D0 /* Pagina 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */; };
 		A71C14241BA21EA800EB3BEE /* loadSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C14231BA21EA800EB3BEE /* loadSwipe.swift */; };
-		A74EE8171BA3293D007CFE8B /* dinastia-p2-q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */; settings = {ASSET_TAGS = (); }; };
-		A74EE8181BA3293D007CFE8B /* dinastia-p2-q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */; settings = {ASSET_TAGS = (); }; };
+		A74EE8171BA3293D007CFE8B /* dinastia-p2-q1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */; };
+		A74EE8181BA3293D007CFE8B /* dinastia-p2-q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */; };
+		A754A2741BAAF17B0056AD6E /* audio-p2-q2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A754A2731BAAF17B0056AD6E /* audio-p2-q2.mp3 */; settings = {ASSET_TAGS = (); }; };
+		A754A2761BAAF2970056AD6E /* Estranho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A754A2751BAAF2970056AD6E /* Estranho.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		A71C14231BA21EA800EB3BEE /* loadSwipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = loadSwipe.swift; path = ComicsSolution/loadSwipe.swift; sourceTree = "<group>"; };
 		A74EE8151BA3293D007CFE8B /* dinastia-p2-q1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dinastia-p2-q1.mp3"; sourceTree = "<group>"; };
 		A74EE8161BA3293D007CFE8B /* dinastia-p2-q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dinastia-p2-q2.mp3"; sourceTree = "<group>"; };
+		A754A2731BAAF17B0056AD6E /* audio-p2-q2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "audio-p2-q2.mp3"; sourceTree = "<group>"; };
+		A754A2751BAAF2970056AD6E /* Estranho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Estranho.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		79258C4C1BA08AA200AEBC7C /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				A754A2721BA9B9330056AD6E /* falas */,
 				5E1B95AC1BA7062C00E6C055 /* Dinastia M */,
 				A70D93811B9F6365008B19D0 /* Pagina 1.mp3 */,
 			);
@@ -195,6 +200,15 @@
 				79258C201B9F32A000AEBC7C /* ComicsSolution.xcdatamodeld */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		A754A2721BA9B9330056AD6E /* falas */ = {
+			isa = PBXGroup;
+			children = (
+				A754A2751BAAF2970056AD6E /* Estranho.mp3 */,
+				A754A2731BAAF17B0056AD6E /* audio-p2-q2.mp3 */,
+			);
+			name = falas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +279,7 @@
 				TargetAttributes = {
 					79258C151B9F32A000AEBC7C = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = ZUD974TE3Q;
+						DevelopmentTeam = 34PHTXR9K4;
 					};
 					79258C2C1B9F32A100AEBC7C = {
 						CreatedOnToolsVersion = 7.0;
@@ -307,6 +321,8 @@
 				79258C271B9F32A000AEBC7C /* LaunchScreen.storyboard in Resources */,
 				79258C241B9F32A000AEBC7C /* Assets.xcassets in Resources */,
 				79258C1F1B9F32A000AEBC7C /* Main.storyboard in Resources */,
+				A754A2741BAAF17B0056AD6E /* audio-p2-q2.mp3 in Resources */,
+				A754A2761BAAF2970056AD6E /* Estranho.mp3 in Resources */,
 				A74EE8171BA3293D007CFE8B /* dinastia-p2-q1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,7 +499,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ComicsSolution/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dangelo.ComicsSolution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,7 +514,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ComicsSolution/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dangelo.ComicsSolution;
 				PRODUCT_NAME = "$(TARGET_NAME)";
